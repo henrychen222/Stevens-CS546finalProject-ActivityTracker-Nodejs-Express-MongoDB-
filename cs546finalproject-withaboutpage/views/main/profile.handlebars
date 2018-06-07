@@ -1,0 +1,46 @@
+<div class="container-fluid">
+    <div class="row">
+        {{> profilenav}}
+
+        <div class="col-10">
+            <div class="container">
+                <div class="row">
+                    {{#each actvityStats}}
+                        <div class="col-xl-3 col-sm-6 mb-3">
+                            <div class="card text-white bg-primary">
+                                <div class="card-body text-center">
+                                    <h3>{{this.count}}</h3>
+                                    <div > {{this._id}} activities tracked!</div>
+                                </div>
+
+                            </div>
+                        </div>
+                    {{/each}}
+                </div>
+                <br>
+                <div class="row">
+                    <div class="col-12"></div>
+                        <table class="table table-striped">
+                            <thead>
+                                <tr>
+                                    <th scope="col">Date</th>
+                                    <th scope="col">Location</th>
+                                    <th scope="col">Type</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {{#each activities}}
+                                    <tr>
+                                        <td>{{this.date}}</td>
+                                        <td>{{this.location}}</td>
+                                        <td>{{this.activity.0.name}}</td>
+                                    </tr>
+                                {{/each}}
+                            </tbody>
+                        </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="/public/js/addactivity.js"></script>

@@ -1,0 +1,39 @@
+<div class="container-fluid">
+    <div class="row">
+        {{> profilenav}}
+
+        <div class="col-10">
+            <div class="container">
+                <h1>Log an Activity</h1>
+                {{#if error}}
+                    <div class="alert alert-danger" role="alert" >
+                        {{error}}
+                    </div>
+                {{/if}}
+                {{#if success}}
+                    <div class="alert alert-success" role="alert" >
+                        {{success}}
+                    </div>
+                {{/if}}
+                <form action="/profile/addactivity" method="POST" class="wordForm">
+                    <div class="form-group">
+                        <label for="activityType">Select Activity</label>
+                        <select class="form-control" id="activityType" name="activityType" >
+                            <option value=0>Select an Activity</option>
+                            {{#each activities}}
+                                <option value="{{this._id}}">{{this.name}}</option>
+                            {{/each}}
+                        </select>
+                        <hr>
+                        <h2 id="activityName"></h2>
+                        <p id="activityDescription"></p>
+                        <div id="addActivityFormFields">
+                        </div>
+                    </div>
+                    <button id="submitBtn" type="submit" class="btn btn-success" disabled>Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="/public/js/addactivity.js"></script>

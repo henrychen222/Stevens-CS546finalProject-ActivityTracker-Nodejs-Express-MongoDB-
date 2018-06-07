@@ -1,0 +1,14 @@
+{
+  "mongoConfig": {
+    "serverUrl": "mongodb://localhost:27017/",
+    "database": "finalproject"
+  },
+  "sessionConfig": {
+    "secret": "cs546secret",
+    "resave": true,
+    "saveUninitialized": false,
+    "cookie":{
+      "expire": 600000
+    }
+  }
+}

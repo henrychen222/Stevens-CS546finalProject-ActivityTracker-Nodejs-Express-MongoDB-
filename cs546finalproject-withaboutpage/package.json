@@ -1,0 +1,32 @@
+{
+  "name": "cs546finalproject",
+  "version": "1.0.0",
+  "description": "Arrays start at 1 final project",
+  "main": "app.js",
+  "scripts": {
+    "seed": "node ./tasks/seed.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/trs576/cs546finalproject.git"
+  },
+  "author": "Tim Swierad, Bruno Rebaza, Justin Miller, Wei Chen, Yue Lei",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/trs576/cs546finalproject/issues"
+  },
+  "homepage": "https://github.com/trs576/cs546finalproject#readme",
+  "dependencies": {
+    "bcrypt-nodejs": "0.0.3",
+    "body-parser": "^1.15.2",
+    "connect-flash": "^0.1.1",
+    "cookie-parser": "^1.4.1",
+    "express": "^4.16.3",
+    "express-handlebars": "^3.0.0",
+    "express-session": "^1.15.6",
+    "mongodb": "^3.0.2",
+    "uuid": "^3.2.1"
+  }
+}
